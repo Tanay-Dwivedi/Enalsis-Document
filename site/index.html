@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Enalsis Docs</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Enalsis";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Enalsis Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Enalsis</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of contents:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aim">Aim</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advantages">Advantages</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#disadvantages-limitations">Disadvantages &amp; Limitations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#future-improvements">Future Improvements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-features-to-add">Additional features to add</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation-instructions">Installation Instructions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-install-python">Step 1: Install Python</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-install-an-integrated-development-environment-ide">Step 2: Install an Integrated Development Environment (IDE)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-install-git-optional-but-recommended">Step 3: Install Git (Optional but Recommended)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-clone-your-project-repository-optional">Step 4: Clone Your Project Repository (Optional)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-5-navigate-to-the-project-directory">Step 5: Navigate to the Project Directory</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-6-install-your-package-dependencies">Step 6: Install Your Package Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-7-use-your-package">Step 7: Use Your Package</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-notes">Additional Notes:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#important-files">Important files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#contributing-file">Contributing File</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#code-of-conduct-file">Code of Conduct File</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bug-report-file">Bug Report File</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#request-feature-file">Request Feature File</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#changelog-file">Changelog File</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-functions">List of functions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-get_entities">1. get_entities()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-get_sentences">2. get_sentences()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_1">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_1">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_1">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_1">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_1">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-get_adjectives">3. get_adjectives()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_2">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_2">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_2">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_2">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_2">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-get_adverbs">4. get_adverbs()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_3">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_3">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_3">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_3">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_3">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-get_nouns">5. get_nouns()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_4">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_4">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_4">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_4">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_4">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-get_pronouns">6. get_pronouns()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_5">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_5">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_5">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_5">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_5">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-get_proper_nouns">7. get_proper_nouns()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_6">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_6">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_6">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_6">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_6">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#8-get_verbs">8. get_verbs()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_7">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_7">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_7">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_7">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_7">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#9-get_numbers">9. get_numbers()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_8">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_8">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_8">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_8">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_8">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#10-detect_language">10. detect_language()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_9">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_9">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_9">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_9">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_9">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#11-parse_syntax_tree">11. parse_syntax_tree()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_10">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_10">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_10">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_10">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_10">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#12-get_pos_tag">12. get_POS_tag()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_11">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_11">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_11">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_11">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_11">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#13-spell_check_text">13. spell_check_text()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_12">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_12">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_12">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_12">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_12">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#14-find_spell_corrections">14. find_spell_corrections()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_13">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_13">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_13">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_13">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_13">How to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#15-profanity_analysis">15. profanity_analysis()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_14">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_14">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_14">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_14">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_14">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#16-sentiment_analysis">16. sentiment_analysis()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_15">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_15">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_15">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_15">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_15">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#17-semantic_similarity">17. semantic_similarity()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_16">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_16">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_16">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_16">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_16">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#18-text_summarization">18. text_summarization()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_17">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_17">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_17">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_17">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_17">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#19-calculate_readability_metrics">19. calculate_readability_metrics()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_18">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_18">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_18">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_18">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_18">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#20-paragraph_sentiment_analysis">20. paragraph_sentiment_analysis()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_19">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_19">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_19">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_19">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_19">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#21-sentence_sentiment_analysis">21. sentence_sentiment_analysis()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_20">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_20">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_20">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_20">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_20">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-extract_word_meanings">22. extract_word_meanings()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_21">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_21">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_21">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_21">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_21">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#23-count_words">23. count_words()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_22">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_22">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_22">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_22">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_22">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#24-calculate_alphabetical_and_numberical_percentages">24. calculate_alphabetical_and_numberical_percentages()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_23">Description:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_23">Parameters:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#return-value_23">Return Value:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example_23">Usage Example:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use_23">How to Use:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Enalsis Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Enalsis</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="enalsis">Enalsis</h1>
+<hr />
+<h2 id="table-of-contents">Table of contents:</h2>
+<ol>
+<li><a href="">Documentation</a></li>
+<li><a href="#aim">Aim</a></li>
+<li><a href="#advantages">Advantages</a></li>
+<li><a href="#disadvantages--limitations">Disadvantages &amp; Limitations</a></li>
+<li><a href="#future-improvements">Future Improvements</a></li>
+<li><a href="#installation-instructions">Installation Instructions</a></li>
+<li><a href="#important-files">Important files</a></li>
+</ol>
+<hr />
+<h2 id="aim">Aim</h2>
+<p>The aim of the project is to provide a <strong>comprehensive</strong> Python <strong>package</strong> for <strong>natural language processing (NLP)</strong> tasks, facilitating <strong>text analysis</strong> and understanding through a range of functionalities. By offering functions for <strong>entity recognition</strong>, <strong>sentiment analysis</strong>, <strong>syntactic parsing</strong>, <strong>spelling correction</strong>, <strong>readability assessment</strong>, and more, the package aims to empower developers and researchers with efficient tools for <strong>processing</strong> and <strong>analyzing textual data</strong>.
+Ultimately, the goal is to simplify the <strong>implementation</strong> of <strong>NLP tasks</strong> within <strong>Python projects</strong>, enabling users to extract <strong>valuable insights</strong> from text data with ease and accuracy.</p>
+<hr />
+<h2 id="advantages">Advantages</h2>
+<ol>
+<li><strong>Versatile Functionality</strong>: The project offers a wide array of text analysis tools covering entity recognition, sentiment analysis, syntactic parsing, and more.</li>
+<li><strong>User-Friendly Interface</strong>: With clear documentation and an intuitive API, users can easily integrate and utilize the package in their projects.</li>
+<li><strong>Reliable Results</strong>: Leveraging established libraries like spaCy and TextBlob ensures accurate and dependable text analysis outcomes.</li>
+<li><strong>Customizable</strong>: Users have the flexibility to adjust parameters and fine-tune algorithms to meet specific project requirements.</li>
+<li><strong>Contributing to NLP</strong>: By facilitating advancements in natural language processing research, the project plays a role in driving innovation and progress in the field.</li>
+</ol>
+<hr />
+<h2 id="disadvantages-limitations">Disadvantages &amp; Limitations</h2>
+<ol>
+<li>
+<p><strong>Continuous Improvement</strong>: Ongoing enhancements are necessary for evolving needs, but resource allocation and prioritization may pose challenges.</p>
+</li>
+<li>
+<p><strong>Customization Constraints</strong>: Addressing highly specialized requirements may require extra effort or external integration, potentially limiting adaptability.</p>
+</li>
+<li>
+<p><strong>Integration Challenges</strong>: Integrating with emerging technologies may face obstacles like compatibility issues or resource constraints, slowing down progress.</p>
+</li>
+<li>
+<p><strong>Community Complexities</strong>: Diverse contributions may introduce complexities like conflicting priorities, requiring effective community management.</p>
+</li>
+<li>
+<p><strong>Learning Curve</strong>: Users may face challenges with the complexity of NLP concepts or contributing to open-source, emphasizing the need for accessible documentation.</p>
+</li>
+</ol>
+<hr />
+<h2 id="future-improvements">Future Improvements</h2>
+<p>Certainly, here are five points on potential future enhancements:</p>
+<ol>
+<li>
+<p><strong>Advanced Machine Learning Models</strong>: Integration of state-of-the-art machine learning models, such as transformer-based architectures like BERT or GPT, to improve the accuracy and performance of text analysis tasks.</p>
+</li>
+<li>
+<p><strong>Multilingual Support</strong>: Expansion of language support beyond English to include a broader range of languages, catering to diverse linguistic datasets and enabling global applications.</p>
+</li>
+<li>
+<p><strong>Real-time Processing</strong>: Development of real-time processing capabilities to handle streaming data, facilitating dynamic text analysis tasks in applications like social media monitoring or live chat support.</p>
+</li>
+<li>
+<p><strong>Interactive Visualization</strong>: Implementation of interactive visualization tools to provide intuitive visual representations of text analysis results, enhancing user understanding and exploration of textual data.</p>
+</li>
+<li>
+<p><strong>Privacy and Security Features</strong>: Integration of enhanced privacy and security features to ensure compliance with data protection regulations and safeguard sensitive information during text analysis processes.</p>
+</li>
+</ol>
+<h3 id="additional-features-to-add">Additional features to add</h3>
+<ul>
+<li>Perform Hate Speech Analysis and Detection on Text</li>
+<li>Perform Topic Modeling on the text</li>
+<li>Intent Recognition of the text</li>
+</ul>
+<hr />
+<h2 id="installation-instructions">Installation Instructions</h2>
+<h3 id="step-1-install-python">Step 1: Install Python</h3>
+<p>If you haven't already, you need to install Python on your system. You can download Python from the official website: <a href="https://www.python.org/downloads/">Python Downloads</a>.</p>
+<h3 id="step-2-install-an-integrated-development-environment-ide">Step 2: Install an Integrated Development Environment (IDE)</h3>
+<p>Choose an IDE to work with Python. Some popular options include:</p>
+<ul>
+<li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code (VSCode)</a></li>
+<li><a href="https://www.spyder-ide.org/">Spyder</a></li>
+<li><a href="https://jupyter.org/install">Jupyter Notebook</a></li>
+</ul>
+<p>Download and install your preferred IDE on your system.</p>
+<h3 id="step-3-install-git-optional-but-recommended">Step 3: Install Git (Optional but Recommended)</h3>
+<p>If you want to clone the project directly from GitHub, you need to install Git. You can download Git from the official website: <a href="https://git-scm.com/downloads">Git Downloads</a>.</p>
+<h3 id="step-4-clone-your-project-repository-optional">Step 4: Clone Your Project Repository (Optional)</h3>
+<p>If you prefer to work with the project locally, you can clone the project repository to your machine using Git. Open a terminal or command prompt and navigate to the directory where you want to clone the repository. Then run:</p>
+<pre><code class="language-bash">git clone https://github.com/Tanay-Dwivedi/English-pip-Package.git
+</code></pre>
+<h3 id="step-5-navigate-to-the-project-directory">Step 5: Navigate to the Project Directory</h3>
+<p>Open your IDE and navigate to the directory where your project is located.</p>
+<h3 id="step-6-install-your-package-dependencies">Step 6: Install Your Package Dependencies</h3>
+<p>To install the required dependencies for your package to run, open a terminal or command prompt within your IDE and navigate to the project directory. Then run:</p>
+<pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+<p>This command will install all the required dependencies listed in the <code>requirements.txt</code> file, ensuring your package can function properly.</p>
+<h3 id="step-7-use-your-package">Step 7: Use Your Package</h3>
+<p>You can now use your package in your Python scripts. Import it using:</p>
+<pre><code class="language-python">import enalsis
+</code></pre>
+<p>Then, you can call the functions provided by your package as needed.</p>
+<h3 id="additional-notes">Additional Notes:</h3>
+<ul>
+<li>Ensure that your package's dependencies are listed in a <code>requirements.txt</code> file or clearly documented in your project's README.</li>
+<li>Refer to your package's documentation for detailed usage instructions and examples.</li>
+<li>Provide a link to your package's GitHub repository or any other relevant resources for further exploration and support.</li>
+</ul>
+<hr />
+<h2 id="important-files">Important files</h2>
+<h3 id="contributing-file">Contributing File</h3>
+<ul>
+<li><strong>You can contribute</strong>: We welcome contributions to enhance our project. Check out our <a href="https://github.com/Tanay-Dwivedi/English-pip-Package/blob/master/CONTRIBUTING.md">Contributing Guidelines</a> to learn how you can get involved, submit bug fixes, suggest new features, and collaborate with us.</li>
+</ul>
+<h3 id="code-of-conduct-file">Code of Conduct File</h3>
+<ul>
+<li><strong>You must adhere</strong>: We maintain a friendly and inclusive environment for all contributors and users. Before participating in our community, please review our <a href="https://github.com/Tanay-Dwivedi/English-pip-Package/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a> to understand the behavior we expect and the consequences of unacceptable conduct.</li>
+</ul>
+<h3 id="bug-report-file">Bug Report File</h3>
+<ul>
+<li><strong>You can report</strong>: Encountered a bug? Let us know! Follow our <a href="https://github.com/Tanay-Dwivedi/English-pip-Package/blob/master/.github/ISSUE_TEMPLATE/bug_report.md">Bug Reporting Guidelines</a> to provide detailed information about the issue, including steps to reproduce it. Your reports help us improve the project for everyone.</li>
+</ul>
+<h3 id="request-feature-file">Request Feature File</h3>
+<ul>
+<li><strong>You can request</strong>: Have an idea for a new feature or enhancement? Share it with us! Check out our <a href="https://github.com/Tanay-Dwivedi/English-pip-Package/blob/master/.github/ISSUE_TEMPLATE/feature_request.md">Feature Request Guidelines</a> to learn how you can request new features and provide valuable insights into how the project can better meet your needs.</li>
+</ul>
+<h3 id="changelog-file">Changelog File</h3>
+<ul>
+<li><strong>You can track</strong>: Stay up-to-date with our project's changes and improvements. Our <a href="https://github.com/Tanay-Dwivedi/English-pip-Package/blob/master/CHANGELOG.md">Changelog</a> documents each version's release notes, highlighting new features, bug fixes, and other modifications. It's your guide to what's new and improved.</li>
+</ul>
+<hr />
+<h2 id="list-of-functions"><strong>List of functions</strong></h2>
+<h3 id="1-get_entities">1. get_entities()</h3>
+<h4 id="description">Description:</h4>
+<p>This function extracts entities from the given text using spaCy's named entity recognition (NER) model. It identifies entities such as persons, organizations, locations, and more.</p>
+<h4 id="parameters">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which entities are to be extracted.</li>
+</ul>
+<h4 id="return-value">Return Value:</h4>
+<ul>
+<li><code>entities</code> (list of tuples): A list of tuples where each tuple contains the text of the entity and its corresponding label.</li>
+</ul>
+<h4 id="usage-example">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;Apple Inc. is located in Cupertino, California.&quot;
+entities = enalsis.get_entities(text)
+print(entities)
+</code></pre>
+<h4 id="how-to-use">How to Use</h4>
+<p>To utilize the <code>get_entities</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Make sure you have installed the required dependencies, including spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module in your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_entities</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of entities returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Ensure that the input text is in English, as the function relies on spaCy's English language model for entity recognition. Additionally, consider preprocessing the text if necessary to improve entity extraction accuracy.</p>
+<hr />
+<h3 id="2-get_sentences">2. get_sentences()</h3>
+<h4 id="description_1">Description:</h4>
+<p>This function extracts sentences from the given text using spaCy's sentence tokenization. It breaks the text into individual sentences based on punctuation and other linguistic cues.</p>
+<h4 id="parameters_1">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which sentences are to be extracted.</li>
+</ul>
+<h4 id="return-value_1">Return Value:</h4>
+<ul>
+<li><code>sentences</code> (list of str): A list of sentences extracted from the input text.</li>
+</ul>
+<h4 id="usage-example_1">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;This is a sample text. It contains multiple sentences. Each sentence ends with a period.&quot;
+sentences = enalsis.get_sentences(text)
+print(sentences)
+</code></pre>
+<h4 id="how-to-use_1">How to Use</h4>
+<p>To utilize the <code>get_sentences</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_sentences</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of sentences returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Ensure that the input text is in English for accurate sentence extraction. Additionally, consider handling any specific punctuation or formatting requirements in your text preprocessing, if necessary.</p>
+<hr />
+<h3 id="3-get_adjectives">3. get_adjectives()</h3>
+<h4 id="description_2">Description:</h4>
+<p>This function extracts adjectives from the given text using spaCy's part-of-speech tagging. It identifies words that function as adjectives in the text.</p>
+<h4 id="parameters_2">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which adjectives are to be extracted.</li>
+</ul>
+<h4 id="return-value_2">Return Value:</h4>
+<ul>
+<li><code>adjectives</code> (list of str): A list of adjectives extracted from the input text.</li>
+</ul>
+<h4 id="usage-example_2">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;The big brown dog chased the small cat.&quot;
+adjectives = enalsis.get_adjectives(text)
+print(adjectives)
+</code></pre>
+<h4 id="how-to-use_2">How to Use</h4>
+<p>To utilize the <code>get_adjectives</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_adjectives</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of adjectives returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Ensure that the input text is in English for accurate adjective extraction. Additionally, consider preprocessing the text if necessary to improve extraction accuracy.</p>
+<hr />
+<h3 id="4-get_adverbs">4. get_adverbs()</h3>
+<h4 id="description_3">Description:</h4>
+<p>This function extracts adverbs from the given text using spaCy's part-of-speech tagging. It identifies words that function as adverbs in the text.</p>
+<h4 id="parameters_3">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which adverbs are to be extracted.</li>
+</ul>
+<h4 id="return-value_3">Return Value:</h4>
+<ul>
+<li><code>adverbs</code> (list of str): A list of adverbs extracted from the input text.</li>
+</ul>
+<h4 id="usage-example_3">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;He quickly ran to the store.&quot;
+adverbs = enalsis.get_adverbs(text)
+print(adverbs)
+</code></pre>
+<h4 id="how-to-use_3">How to Use</h4>
+<p>To utilize the <code>get_adverbs</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_adverbs</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of adverbs returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Ensure that the input text is in English for accurate adverb extraction. Additionally, consider preprocessing the text if necessary to improve extraction accuracy.</p>
+<hr />
+<h3 id="5-get_nouns">5. get_nouns()</h3>
+<h4 id="description_4">Description:</h4>
+<p>This function extracts nouns from the given text using spaCy's part-of-speech tagging. It identifies words that function as nouns in the text.</p>
+<h4 id="parameters_4">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which nouns are to be extracted.</li>
+</ul>
+<h4 id="return-value_4">Return Value:</h4>
+<ul>
+<li><code>nouns</code> (list of str): A list of nouns extracted from the input text.</li>
+</ul>
+<h4 id="usage-example_4">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;The cat sat on the mat.&quot;
+nouns = enalsis.get_nouns(text)
+print(nouns)
+</code></pre>
+<h4 id="how-to-use_4">How to Use</h4>
+<p>To utilize the <code>get_nouns</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_nouns</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of nouns returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Ensure that the input text is in English for accurate noun extraction. Additionally, consider preprocessing the text if necessary to improve extraction accuracy.</p>
+<hr />
+<h3 id="6-get_pronouns">6. get_pronouns()</h3>
+<h4 id="description_5">Description:</h4>
+<p>This function extracts pronouns from the given text using spaCy's part-of-speech tagging. It identifies words that function as pronouns in the text.</p>
+<h4 id="parameters_5">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which pronouns are to be extracted.</li>
+</ul>
+<h4 id="return-value_5">Return Value:</h4>
+<ul>
+<li><code>pronouns</code> (list of str): A list of pronouns extracted from the input text.</li>
+</ul>
+<h4 id="usage-example_5">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;He went to the park with his friends.&quot;
+pronouns = enalsis.get_pronouns(text)
+print(pronouns)
+</code></pre>
+<h4 id="how-to-use_5">How to Use</h4>
+<p>To utilize the <code>get_pronouns</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_pronouns</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of pronouns returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Ensure that the input text is in English for accurate pronoun extraction. Additionally, consider preprocessing the text if necessary to improve extraction accuracy.</p>
+<hr />
+<h3 id="7-get_proper_nouns">7. get_proper_nouns()</h3>
+<h4 id="description_6">Description:</h4>
+<p>This function extracts proper nouns from the given text using spaCy's part-of-speech tagging. It identifies words that function as proper nouns in the text.</p>
+<h4 id="parameters_6">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which proper nouns are to be extracted.</li>
+</ul>
+<h4 id="return-value_6">Return Value:</h4>
+<ul>
+<li><code>proper_nouns</code> (list of str): A list of proper nouns extracted from the input text.</li>
+</ul>
+<h4 id="usage-example_6">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;John visited New York last summer.&quot;
+proper_nouns = enalsis.get_proper_nouns(text)
+print(proper_nouns)
+</code></pre>
+<h4 id="how-to-use_6">How to Use</h4>
+<p>To utilize the <code>get_proper_nouns</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_proper_nouns</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of proper nouns returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Ensure that the input text is in English for accurate proper noun extraction. Additionally, consider preprocessing the text if necessary to improve extraction accuracy.</p>
+<hr />
+<h3 id="8-get_verbs">8. get_verbs()</h3>
+<h4 id="description_7">Description:</h4>
+<p>This function extracts verbs from the given text using spaCy's part-of-speech tagging. It identifies words that function as verbs in the text.</p>
+<h4 id="parameters_7">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which verbs are to be extracted.</li>
+</ul>
+<h4 id="return-value_7">Return Value:</h4>
+<ul>
+<li><code>verbs</code> (list of str): A list of verbs extracted from the input text.</li>
+</ul>
+<h4 id="usage-example_7">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;She runs every morning.&quot;
+verbs = enalsis.get_verbs(text)
+print(verbs)
+</code></pre>
+<h4 id="how-to-use_7">How to Use</h4>
+<p>To utilize the <code>get_verbs</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_verbs</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of verbs returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Ensure that the input text is in English for accurate verb extraction. Additionally, consider preprocessing the text if necessary to improve extraction accuracy.</p>
+<hr />
+<h3 id="9-get_numbers">9. get_numbers()</h3>
+<h4 id="description_8">Description:</h4>
+<p>This function extracts numbers from the given text using spaCy's part-of-speech tagging. It identifies words that represent numerical values in the text.</p>
+<h4 id="parameters_8">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which numbers are to be extracted.</li>
+</ul>
+<h4 id="return-value_8">Return Value:</h4>
+<ul>
+<li><code>numbers</code> (list of str): A list of numbers extracted from the input text.</li>
+</ul>
+<h4 id="usage-example_8">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;There are 10 apples in the basket.&quot;
+numbers = enalsis.get_numbers(text)
+print(numbers)
+</code></pre>
+<h4 id="how-to-use_8">How to Use</h4>
+<p>To utilize the <code>get_numbers</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_numbers</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of numbers returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Ensure that the input text is in English for accurate number extraction. Additionally, consider preprocessing the text if necessary to improve extraction accuracy.</p>
+<hr />
+<h3 id="10-detect_language">10. detect_language()</h3>
+<h4 id="description_9">Description:</h4>
+<p>This function detects the language of the given text using the langid library. It analyzes the text and identifies the language it is written in.</p>
+<h4 id="parameters_9">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text whose language is to be detected.</li>
+</ul>
+<h4 id="return-value_9">Return Value:</h4>
+<ul>
+<li><code>language_name</code> (str): The name of the language detected in the input text.</li>
+</ul>
+<h4 id="usage-example_9">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;Bonjour tout le monde!&quot;
+language = enalsis.detect_language(text)
+print(language)
+</code></pre>
+<h4 id="how-to-use_9">How to Use</h4>
+<p>To utilize the <code>detect_language</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed the "langid" library, which is a dependency of the "enalsis" package.</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>detect_language</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the detected language name returned by the function and use it as needed in your application.</p>
+</li>
+</ol>
+<p>Keep in mind that the accuracy of language detection may vary depending on the input text and the language models used by the library.</p>
+<hr />
+<h3 id="11-parse_syntax_tree">11. parse_syntax_tree()</h3>
+<h4 id="description_10">Description:</h4>
+<p>This function performs syntax tree analysis on the given text using spaCy's dependency parsing capabilities. It constructs a syntax tree for the text, providing information about the syntactic structure of the sentences.</p>
+<h4 id="parameters_10">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text for which syntax tree analysis is to be performed.</li>
+</ul>
+<h4 id="return-value_10">Return Value:</h4>
+<ul>
+<li><code>syntax_tree_dict</code> (list of dicts): A list of dictionaries where each dictionary represents a token in the text and contains information such as the token's text, dependency relation, part-of-speech tag, and its head token.</li>
+</ul>
+<h4 id="usage-example_10">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;The cat sat on the mat.&quot;
+syntax_tree = enalsis.parse_syntax_tree(text)
+print(syntax_tree)
+</code></pre>
+<h4 id="how-to-use_10">How to Use</h4>
+<p>To utilize the <code>parse_syntax_tree</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure that you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>parse_syntax_tree</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the syntax tree dictionary returned by the function and use it as needed in your application.</p>
+</li>
+</ol>
+<p>This function provides valuable insights into the syntactic structure of the text, which can be utilized for tasks such as parsing, grammar checking, and syntactic analysis.</p>
+<hr />
+<h3 id="12-get_pos_tag">12. get_POS_tag()</h3>
+<h4 id="description_11">Description:</h4>
+<p>This function extracts part-of-speech (POS) tags from the given text using spaCy's POS tagging capabilities. It assigns a grammatical category to each token in the text, such as noun, verb, adjective, etc.</p>
+<h4 id="parameters_11">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which POS tags are to be extracted.</li>
+</ul>
+<h4 id="return-value_11">Return Value:</h4>
+<ul>
+<li><code>pos_list</code> (list of dicts): A list of dictionaries where each dictionary contains information about a token's word and its corresponding POS tag.</li>
+</ul>
+<h4 id="usage-example_11">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;The cat sat on the mat.&quot;
+pos_tags = enalsis.get_POS_tag(text)
+print(pos_tags)
+</code></pre>
+<h4 id="how-to-use_11">How to Use</h4>
+<p>To utilize the <code>get_POS_tag</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Make sure you have installed spaCy and its English language model (<code>en_core_web_sm</code>).</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>get_POS_tag</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of POS tags returned by the function and use them as needed in your application.</p>
+</li>
+</ol>
+<p>Understanding the POS tags of the text can be helpful for various natural language processing tasks such as text classification, information extraction, and sentiment analysis.</p>
+<hr />
+<h3 id="13-spell_check_text">13. spell_check_text()</h3>
+<h4 id="description_12">Description:</h4>
+<p>This function performs spell-checking on the given text using the TextBlob library. It identifies misspelled words in the text and provides the corrected version of the text.</p>
+<h4 id="parameters_12">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text to be spell-checked.</li>
+</ul>
+<h4 id="return-value_12">Return Value:</h4>
+<ul>
+<li><code>misspelled_words</code> (list): A list of misspelled words found in the input text.</li>
+<li><code>corrected_text</code> (str): The corrected version of the input text with misspelled words replaced.</li>
+</ul>
+<h4 id="usage-example_12">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;Thiss is a misspeled sentence.&quot;
+misspelled_words, corrected_text = enalsis.spell_check_text(text)
+print(&quot;Misspelled Words:&quot;, misspelled_words)
+print(&quot;Corrected Text:&quot;, corrected_text)
+</code></pre>
+<h4 id="how-to-use_12">How to Use</h4>
+<p>To utilize the <code>spell_check_text</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure you have installed the TextBlob library.</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>spell_check_text</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of misspelled words and the corrected text returned by the function.</p>
+</li>
+<li>
+<p>Use the corrected text for further analysis or processing in your application.</p>
+</li>
+</ol>
+<p>Spell-checking can help improve the accuracy and readability of text data, particularly in applications where precise language is required, such as document analysis, sentiment analysis, or machine translation.</p>
+<hr />
+<h3 id="14-find_spell_corrections">14. find_spell_corrections()</h3>
+<h4 id="description_13">Description:</h4>
+<p>This function identifies misspelled words in the given text and provides their respective corrected versions using the TextBlob library.</p>
+<h4 id="parameters_13">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text in which misspelled words are to be identified and corrected.</li>
+</ul>
+<h4 id="return-value_13">Return Value:</h4>
+<ul>
+<li><code>misspelled_dict</code> (dict): A dictionary where keys represent misspelled words and values represent their respective corrected versions.</li>
+</ul>
+<h4 id="usage-example_13">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;Thiss is a misspeled sentence.&quot;
+misspelled_dict = enalsis.find_spell_corrections(text)
+print(&quot;Misspelled Word Corrections:&quot;, misspelled_dict)
+</code></pre>
+<h4 id="how-to-use_13">How to Use</h4>
+<p>To utilize the <code>find_spell_corrections</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>
+<p>Ensure you have installed the TextBlob library.</p>
+</li>
+<li>
+<p>Import the <code>enalsis</code> module into your Python script.</p>
+</li>
+<li>
+<p>Call the <code>find_spell_corrections</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the dictionary containing misspelled words and their respective corrected versions returned by the function.</p>
+</li>
+<li>
+<p>Use the corrected text for further analysis or processing in your application.</p>
+</li>
+</ol>
+<p>Spell-checking can help improve the accuracy and readability of text data, particularly in applications where precise language is required, such as document analysis, sentiment analysis, or machine translation.</p>
+<hr />
+<h3 id="15-profanity_analysis">15. profanity_analysis()</h3>
+<h4 id="description_14">Description:</h4>
+<p>This function analyzes the input text for profanity and obscene language using a pre-trained model. It calculates a profanity score and probability indicating the likelihood of the text containing offensive language.</p>
+<h4 id="parameters_14">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text to be analyzed for profanity.</li>
+</ul>
+<h4 id="return-value_14">Return Value:</h4>
+<ul>
+<li><code>is_profane</code> (bool): A boolean value indicating whether the text is considered profane (True) or not (False).</li>
+<li><code>profanity_score</code> (float): A numerical score representing the degree of profanity detected in the text.</li>
+<li><code>profanity_prob</code> (float): The probability of the text containing offensive language, ranging from 0 to 1.</li>
+</ul>
+<h4 id="usage-example_14">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;This is a clean text.&quot;
+is_profane, profanity_score, profanity_prob = enalsis.profanity_analysis(text)
+print(&quot;Is Profane:&quot;, is_profane)
+print(&quot;Profanity Score:&quot;, profanity_score)
+print(&quot;Profanity Probability:&quot;, profanity_prob)
+</code></pre>
+<h4 id="how-to-use_14">How to Use:</h4>
+<p>To utilize the <code>profanity_analysis</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>Ensure you have installed the required dependencies, including the pre-trained profanity detection model.</li>
+<li>Import the <code>enalsis</code> module into your Python script.</li>
+<li>Call the <code>profanity_analysis</code> function, passing the input text as an argument.</li>
+<li>Receive the profanity analysis results, including whether the text is profane, the profanity score, and the probability of profanity.</li>
+<li>Use the results to filter or flag potentially offensive content in your application.</li>
+</ol>
+<p>Profanity analysis can be useful in content moderation, sentiment analysis, and filtering inappropriate text in online platforms or communication channels.</p>
+<hr />
+<h3 id="16-sentiment_analysis">16. sentiment_analysis()</h3>
+<h4 id="description_15">Description:</h4>
+<p>This function performs sentiment analysis on the input text using the TextBlob library. It calculates the sentiment polarity of the text, indicating whether it is positive, negative, or neutral. Additionally, it identifies the most frequent sentiment-associated words in the text.</p>
+<h4 id="parameters_15">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text to be analyzed for sentiment.</li>
+</ul>
+<h4 id="return-value_15">Return Value:</h4>
+<ul>
+<li><code>results</code> (dict): A dictionary containing the sentiment analysis results, including:</li>
+<li><code>sentiment_label</code> (str): The sentiment label indicating whether the text is positive, negative, or neutral.</li>
+<li><code>sentiment_polarity</code> (float): The sentiment polarity score of the text, ranging from -1 (most negative) to 1 (most positive).</li>
+<li><code>sentiment_words</code> (list of dicts): A list of dictionaries, each containing:<ul>
+<li><code>word</code> (str): The sentiment-associated word.</li>
+<li><code>score</code> (float): The sentiment polarity score of the word.</li>
+<li><code>frequency</code> (int): The frequency of occurrence of the word in the text.</li>
+</ul>
+</li>
+</ul>
+<h4 id="usage-example_15">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;This is a very positive sentence.&quot;
+results = enalsis.sentiment_analysis(text)
+print(&quot;Sentiment Label:&quot;, results['sentiment_label'])
+print(&quot;Sentiment Polarity:&quot;, results['sentiment_polarity'])
+print(&quot;Sentiment Words:&quot;, results['sentiment_words'])
+</code></pre>
+<h4 id="how-to-use_15">How to Use:</h4>
+<p>To utilize the <code>sentiment_analysis</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>Ensure you have installed the TextBlob library.</li>
+<li>Import the <code>enalsis</code> module into your Python script.</li>
+<li>Call the <code>sentiment_analysis</code> function, passing the input text as an argument.</li>
+<li>Receive the sentiment analysis results, including the sentiment label, sentiment polarity, and sentiment-associated words.</li>
+<li>Utilize the results to gain insights into the sentiment of the text and analyze sentiment trends in your data.</li>
+</ol>
+<hr />
+<h3 id="17-semantic_similarity">17. semantic_similarity()</h3>
+<h4 id="description_16">Description:</h4>
+<p>This function calculates the semantic similarity between two input texts using the spaCy library. It computes the similarity score based on the cosine similarity between the vector representations of the texts obtained from the pre-trained word vectors in the spaCy medium-sized English language model.</p>
+<h4 id="parameters_16">Parameters:</h4>
+<ul>
+<li><code>text1</code> (str): The first input text for semantic similarity comparison.</li>
+<li><code>text2</code> (str): The second input text for semantic similarity comparison.</li>
+</ul>
+<h4 id="return-value_16">Return Value:</h4>
+<ul>
+<li><code>similarity_score</code> (float): The semantic similarity score between the two input texts, ranging from 0 (least similar) to 1 (most similar).</li>
+</ul>
+<h4 id="usage-example_16">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text1 = &quot;I enjoy reading books.&quot;
+text2 = &quot;Reading is one of my favorite hobbies.&quot;
+similarity_score = enalsis.semantic_similarity(text1, text2)
+print(&quot;Semantic Similarity Score:&quot;, similarity_score)
+</code></pre>
+<h4 id="how-to-use_16">How to Use:</h4>
+<p>To utilize the <code>semantic_similarity</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>Ensure you have installed the spaCy library with the medium-sized English language model (<code>en_core_web_md</code>).</li>
+<li>Import the <code>enalsis</code> module into your Python script.</li>
+<li>Call the <code>semantic_similarity</code> function, passing the two input texts as arguments.</li>
+<li>Receive the semantic similarity score, indicating the degree of similarity between the two texts.</li>
+<li>Utilize the similarity score to assess the semantic resemblance between texts, which can be helpful in various NLP tasks such as duplicate detection, recommendation systems, and information retrieval.</li>
+</ol>
+<hr />
+<h3 id="18-text_summarization">18. text_summarization()</h3>
+<h4 id="description_17">Description:</h4>
+<p>This function generates a summary of the input text by selecting the most informative sentences. It utilizes a basic approach to extract important sentences based on the frequency of occurrence of words within those sentences. Stop words are removed from consideration to focus on meaningful content.</p>
+<h4 id="parameters_17">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text for which a summary is to be generated.</li>
+<li><code>num_lines</code> (int): The desired number of sentences in the summary.</li>
+</ul>
+<h4 id="return-value_17">Return Value:</h4>
+<ul>
+<li><code>summary</code> (str): A summarized version of the input text containing the most relevant sentences based on word frequency.</li>
+</ul>
+<h4 id="usage-example_17">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;
+num_lines = 2
+summary = enalsis.text_summarization(text, num_lines)
+print(&quot;Text Summary:&quot;, summary)
+</code></pre>
+<h4 id="how-to-use_17">How to Use:</h4>
+<p>To utilize the <code>text_summarization</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>Ensure you have installed the NLTK library.</li>
+<li>Import the <code>enalsis</code> module into your Python script.</li>
+<li>Call the <code>text_summarization</code> function, passing the input text and the desired number of sentences in the summary.</li>
+<li>Receive the summarized version of the input text, which contains the most relevant sentences.</li>
+<li>Adjust the <code>num_lines</code> parameter to control the length of the summary according to your requirements.</li>
+</ol>
+<hr />
+<h3 id="19-calculate_readability_metrics">19. calculate_readability_metrics()</h3>
+<h4 id="description_18">Description:</h4>
+<p>This function calculates various readability metrics for the given text, providing insights into the complexity and ease of comprehension. It computes metrics such as the Flesch Reading Ease, Flesch-Kincaid Grade Level, SMOG Index, Coleman-Liau Index, Automated Readability Index, Dale-Chall Readability Score, and others.</p>
+<h4 id="parameters_18">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text for which readability metrics are to be calculated.</li>
+</ul>
+<h4 id="return-value_18">Return Value:</h4>
+<ul>
+<li><code>readability_metrics</code> (dict): A dictionary containing various readability metrics along with their corresponding values computed for the input text.</li>
+</ul>
+<h4 id="usage-example_18">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;
+readability_metrics = enalsis.calculate_readability_metrics(text)
+print(&quot;Readability Metrics:&quot;, readability_metrics)
+</code></pre>
+<h4 id="how-to-use_18">How to Use:</h4>
+<p>To utilize the <code>calculate_readability_metrics</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>Ensure you have installed the textstat library.</li>
+<li>Import the <code>enalsis</code> module into your Python script.</li>
+<li>Call the <code>calculate_readability_metrics</code> function, passing the input text as an argument.</li>
+<li>Receive a dictionary containing various readability metrics computed for the input text.</li>
+<li>Analyze the readability metrics to assess the complexity and ease of comprehension of the text.</li>
+</ol>
+<hr />
+<h3 id="20-paragraph_sentiment_analysis">20. paragraph_sentiment_analysis()</h3>
+<h4 id="description_19">Description:</h4>
+<p>This function performs sentiment analysis on each paragraph of the given text, providing sentiment scores for each paragraph separately. It utilizes the TextBlob library to compute the polarity of each paragraph, indicating whether the sentiment is positive, negative, or neutral.</p>
+<h4 id="parameters_19">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text containing multiple paragraphs for which sentiment analysis is to be performed.</li>
+</ul>
+<h4 id="return-value_19">Return Value:</h4>
+<ul>
+<li><code>sentiments</code> (list): A list containing sentiment scores for each paragraph in the input text. Positive scores indicate positive sentiment, negative scores indicate negative sentiment, and zero indicates neutral sentiment.</li>
+</ul>
+<h4 id="usage-example_19">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;
+sentiments = enalsis.paragraph_sentiment_analysis(text)
+print(&quot;Paragraph Sentiment Scores:&quot;, sentiments)
+</code></pre>
+<h4 id="how-to-use_19">How to Use:</h4>
+<p>To utilize the <code>paragraph_sentiment_analysis</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>Import the <code>enalsis</code> module into your Python script.</li>
+<li>Call the <code>paragraph_sentiment_analysis</code> function, passing the input text containing multiple paragraphs as an argument.</li>
+<li>Receive a list containing sentiment scores for each paragraph in the input text.</li>
+<li>Analyze the sentiment scores to understand the overall sentiment distribution across paragraphs and identify any patterns or trends.</li>
+</ol>
+<hr />
+<h3 id="21-sentence_sentiment_analysis">21. sentence_sentiment_analysis()</h3>
+<h4 id="description_20">Description:</h4>
+<p>This function conducts sentiment analysis on each sentence within the given text, providing sentiment scores for individual sentences. It utilizes the TextBlob library to compute the polarity of each sentence, indicating whether the sentiment is positive, negative, or neutral.</p>
+<h4 id="parameters_20">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text containing multiple sentences for which sentiment analysis is to be performed.</li>
+</ul>
+<h4 id="return-value_20">Return Value:</h4>
+<ul>
+<li><code>sentiments</code> (list): A list containing sentiment scores for each sentence in the input text. Positive scores indicate positive sentiment, negative scores indicate negative sentiment, and zero indicates neutral sentiment.</li>
+</ul>
+<h4 id="usage-example_20">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;This is a positive sentence. This is a negative sentence. This sentence is neutral.&quot;
+sentiments = enalsis.sentence_sentiment_analysis(text)
+print(&quot;Sentence Sentiment Scores:&quot;, sentiments)
+</code></pre>
+<h4 id="how-to-use_20">How to Use:</h4>
+<p>To utilize the <code>sentence_sentiment_analysis</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>Import the <code>enalsis</code> module into your Python script.</li>
+<li>Call the <code>sentence_sentiment_analysis</code> function, passing the input text containing multiple sentences as an argument.</li>
+<li>Receive a list containing sentiment scores for each sentence in the input text.</li>
+<li>Analyze the sentiment scores to understand the sentiment distribution across sentences and identify any patterns or trends.</li>
+</ol>
+<hr />
+<h3 id="22-extract_word_meanings">22. extract_word_meanings()</h3>
+<h4 id="description_21">Description:</h4>
+<p>This function extracts words from the given text and retrieves their respective meanings using WordNet, a lexical database for the English language.</p>
+<h4 id="parameters_21">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which words and their meanings are to be extracted.</li>
+</ul>
+<h4 id="return-value_21">Return Value:</h4>
+<ul>
+<li><code>word_meanings</code> (list of dicts): A list of dictionaries where each dictionary contains a word and its corresponding meanings retrieved from WordNet.</li>
+</ul>
+<h4 id="usage-example_21">Usage Example:</h4>
+<pre><code class="language-python">from your_package import extract_word_meanings
+
+# Example usage of the function
+text = &quot;The quick brown fox jumps over the lazy dog.&quot;
+word_meanings = extract_word_meanings(text)
+print(&quot;Words and Their Meanings:&quot;, word_meanings)
+</code></pre>
+<h4 id="how-to-use_21">How to Use:</h4>
+<p>To utilize the <code>extract_word_meanings</code> function in your Python scripts with the package:</p>
+<ol>
+<li>
+<p>Ensure you have installed the necessary dependencies, including NLTK and WordNet.</p>
+</li>
+<li>
+<p>Import the <code>extract_word_meanings</code> function from your package.</p>
+</li>
+<li>
+<p>Call the <code>extract_word_meanings</code> function, passing the input text as an argument.</p>
+</li>
+<li>
+<p>Retrieve the list of dictionaries containing words and their respective meanings returned by the function.</p>
+</li>
+<li>
+<p>Utilize the extracted word meanings for various purposes such as semantic analysis, text understanding, or language processing tasks.</p>
+</li>
+</ol>
+<hr />
+<h3 id="23-count_words">23. count_words()</h3>
+<h4 id="description_22">Description:</h4>
+<p>This function extracts words from the given text along with their respective frequencies (i.e., how many times each word appears in the text). It utilizes regular expressions to find all word tokens and then counts their occurrences using the <code>Counter</code> class from the <code>collections</code> module.</p>
+<h4 id="parameters_22">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which words and their frequencies are to be extracted.</li>
+</ul>
+<h4 id="return-value_22">Return Value:</h4>
+<ul>
+<li>List of tuples: Each tuple contains a word and its corresponding frequency in the text.</li>
+</ul>
+<h4 id="usage-example_22">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;The quick brown fox jumps over the lazy dog.&quot;
+word_frequencies = enalsis.count_words(text)
+print(&quot;Word Frequencies:&quot;, word_frequencies)
+</code></pre>
+<h4 id="how-to-use_22">How to Use:</h4>
+<p>To utilize the <code>count_words</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>Import the <code>enalsis</code> module into your Python script.</li>
+<li>Call the <code>count_words</code> function, passing the input text as an argument.</li>
+<li>The function will return a list of tuples, where each tuple contains a word and its corresponding frequency in the text.</li>
+<li>Optionally, you can iterate over the list of tuples to access individual word-frequency pairs for further analysis or processing.</li>
+</ol>
+<hr />
+<h3 id="24-calculate_alphabetical_and_numberical_percentages">24. calculate_alphabetical_and_numberical_percentages()</h3>
+<h4 id="description_23">Description:</h4>
+<p>This function calculates the percentage of alphabetical, numerical, and whitespace characters in the given text. It counts the total number of characters, alphabetical characters, numerical characters, and whitespace characters in the text, and then calculates the respective percentages based on these counts.</p>
+<h4 id="parameters_23">Parameters:</h4>
+<ul>
+<li><code>text</code> (str): The input text from which the percentages are to be calculated.</li>
+</ul>
+<h4 id="return-value_23">Return Value:</h4>
+<ul>
+<li>Tuple: A tuple containing three percentage values representing the proportion of alphabetical characters, numerical characters, and whitespace characters in the text, respectively.</li>
+</ul>
+<h4 id="usage-example_23">Usage Example:</h4>
+<pre><code class="language-python">import enalsis
+
+# Example usage of the function
+text = &quot;The quick brown fox jumps over the 123 lazy dogs.&quot;
+alphabetic_percentage, numerical_percentage, whitespace_percentage = enalsis.calculate_alphabetical_and_numberical_percentages(text)
+print(&quot;Alphabetic Percentage:&quot;, alphabetic_percentage)
+print(&quot;Numerical Percentage:&quot;, numerical_percentage)
+print(&quot;Whitespace Percentage:&quot;, whitespace_percentage)
+</code></pre>
+<h4 id="how-to-use_23">How to Use:</h4>
+<p>To utilize the <code>calculate_alphabetical_and_numberical_percentages</code> function in your Python scripts with the "enalsis" package:</p>
+<ol>
+<li>Import the <code>enalsis</code> module into your Python script.</li>
+<li>Call the <code>calculate_alphabetical_and_numberical_percentages</code> function, passing the input text as an argument.</li>
+<li>The function will return a tuple containing three percentage values representing the proportion of alphabetical characters, numerical characters, and whitespace characters in the text.</li>
+<li>You can then access and utilize these percentage values as needed for further analysis or processing.</li>
+</ol>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>The <strong>enalsis</strong> package offers a comprehensive suite of text analysis tools designed to facilitate various linguistic and semantic tasks. With functions covering a wide range of functionalities, users can easily perform tasks such as entity extraction, sentiment analysis, readability assessment, and more. This Python package leverages popular libraries such as spaCy, NLTK, and TextBlob to provide efficient and accurate analysis capabilities.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2024-02-08 18:34:01.000191+00:00
+-->
