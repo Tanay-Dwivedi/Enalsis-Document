@@ -1,2 +1,5 @@
 site_name: Enalsis Docs
 theme: readthedocs
+nav:
+  - Home: index.md
+  - Outputs: output.md
